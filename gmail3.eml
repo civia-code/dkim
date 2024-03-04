@@ -1,0 +1,82 @@
+Delivered-To: helloworld3456@gmail.com
+Received: by 2002:a05:7022:1082:b0:68:6a19:22bf with SMTP id ep2csp1030705dlb;
+        Mon, 17 Jul 2023 03:14:00 -0700 (PDT)
+X-Received: by 2002:a05:6a00:2285:b0:66a:4a45:e023 with SMTP id f5-20020a056a00228500b0066a4a45e023mr14794246pfe.26.1689588840258;
+        Mon, 17 Jul 2023 03:14:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1689588840; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zctMrCm4Ur4uPtrbEsaJQwy0sUytqRep4xV2kEw6ewenRCk3tuS2mCzin0aUOM1Il+
+         h0yFR8C8oUb1yi1yVmvhlrSzFyhKZSkgm74eVhuc/5BV/jbcO3kPTpZQZtP3+4d+C6wo
+         78JQkg1My3LBFfB9QDr9X8TAvHpjNlMA2E3irGHMZSB5oc2ptErpQjLIKKhvxHMiWVvI
+         sg8MRDBW/H7Sg3gtvQmH7EBz5auqxoOYA8LMKHjkIFYx7l6pYOY5kvaIhc6eU2PK6HnC
+         KsBmpeUJc2zkCoRItcwydoIFtBaKmMLWjEu2woVrZCk5/mnAnvPvIcFxBrkGDdbPjP+g
+         Gvnw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=3ieFZwRaDFJrBqSGX+kZ4EQPlQvC6yeLdGM0yId1OMs=;
+        fh=lwxzAxStUetbm77cditmJj8E18lnoZYhacd1XOt2ugg=;
+        b=DQo8lxdAIFMVO0G/MFYrMpHBSwE70CQs0IH+LoMuH43OJJueAxopsMtp3PxLmVmvvd
+         rq/xVJP9TyIh76E1oHOj0eJJsLJEalL7YJPLQZGE8t9RpAUTjIqeyP4iMNt9vFDdIc0a
+         brgJjpk9bu5VPY+9ClWIaI0ln3ToRp/WJBN8UvvbO3z6pZ0+a6fmRqCggkpjq2pSaZe5
+         BPPAR+urmy5YVwMMPESnvYTd9bgXZA2Ou9NJcwFK3k63CNW+Gsa9AgBG0YzUm2TFvxF2
+         to3XqGZaA0zpuH0VeQiT8k7yLGNt1J3YYK+WMYkSMEWyvii6hpYGs4bthxzqMzREiRgm
+         c4eA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=cvAbPoxT;
+       spf=pass (google.com: domain of roergknbcaqia@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=roergknbcaqia@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <roergknbcaqia@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id p16-20020a637f50000000b0051b84545ee0sor3911706pgn.4.2023.07.17.03.14.00
+        for <helloworld3456@gmail.com>
+        (Google Transport Security);
+        Mon, 17 Jul 2023 03:14:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of roergknbcaqia@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=cvAbPoxT;
+       spf=pass (google.com: domain of roergknbcaqia@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=roergknbcaqia@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1689588840; x=1692180840;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=3ieFZwRaDFJrBqSGX+kZ4EQPlQvC6yeLdGM0yId1OMs=;
+        b=cvAbPoxTVfpCJclrsg6PrhZYHArj0jViooII3vCUQ9ibbptZstN1oCtSKMFFBA9Rbt
+         dqDOodg7bx1tJDB7AblT+F974N83/kI1qPtTZUOgRvp6ceHXJ3Jc1T4LmJPx47kG+M6X
+         CDsRKVVTW+PfqcXvtEpLKO0TIeb84WxH4Yf1rEXG0AHa2ifqiuEOXV2H3JpQWOU5hIH1
+         BoUJ52yC1xe19F7Gl5DFLou6A0dAxFG1p2b+zxL9v3/ZgF1tiOQmmTNeKCJGQ0f+v+pd
+         /tgED9JhV8OArH7SpIMLnUM+P1CuslnTnqDJ47/zhN3PFNvJ66hjMX9LybQoBJyM5RvW
+         n21g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1689588840; x=1692180840;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=3ieFZwRaDFJrBqSGX+kZ4EQPlQvC6yeLdGM0yId1OMs=;
+        b=Swnleyn9wN2xoVuUB2cueH3XM138Ol4Py6ljKHR15QgZdQtRBmpWyQihICxcr/NRA6
+         ZSWwym5Nev8IluNsOVngJP6LVqG5DLkSMqFw4JkLjdimMzjQk7Cld6XQu8xVqT+Zl3//
+         O0vXieeCCdv5PzuMZZPhRr+UQOaNLL3CMB0ClrF4Eqg/CMOTQvAsDI7NQBN1V/YgxakA
+         t/xObSK7qxSao6o3jhVpnWrBNe/qef2qXvmYgBrPCl2ERfQGONa5W8F29kWpNJkEM8Ta
+         yD3bsM6Nd+J7NVulK53PnWXEWb/MIX0q/bz6xHgvHKNcZzoWYpkf/aG/+wT7NZY4KnwD
+         q3eA==
+X-Gm-Message-State: ABy/qLbAxlG9C0f/PtbZpuiuDxoJTx05Lz2Isw1DKgotSYzPt2EWAT6l ti3xFf1Tv+kDrZjJBliieCS/jj0mTrqlVM6fEYslblb92bY=
+X-Google-Smtp-Source: APBJJlG802JzeINJ3aJfugZanKNt+bdiauN2Oa54Dj4HgVbI8YsvJBuGz+SzQVBElnoFwalRpMrhKA6mFnzEWOTdqDs=
+X-Received: by 2002:a17:90b:4a0b:b0:263:72c5:9ac6 with SMTP id kk11-20020a17090b4a0b00b0026372c59ac6mr10000675pjb.11.1689588839917; Mon, 17 Jul 2023 03:13:59 -0700 (PDT)
+MIME-Version: 1.0
+From: holmes noreen <roergknbcaqia@gmail.com>
+Date: Mon, 17 Jul 2023 18:13:49 +0800
+Message-ID: <CA+H2_Yokqx5_z+tDiL0aCeQAVRcGC5zf3_6smE_JeYjPHXkhPA@mail.gmail.com>
+Subject: test
+To: helloworld3456@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000009eac480600ac0e16"
+
+--0000000000009eac480600ac0e16
+Content-Type: text/plain; charset="UTF-8"
+
+hello
+
+--0000000000009eac480600ac0e16
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">hello</div>
+
+--0000000000009eac480600ac0e16--
